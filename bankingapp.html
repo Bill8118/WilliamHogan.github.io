@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Banking Application Project Overview</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a class="logo">Overview</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">About Me</a></li>
+							<li><a href="projects.html">Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Banking Application<br /></h1>
+								</header>
+
+								<!-- Text stuff -->
+									<p>I chose this project to build on what I had learned while doing the OCA course. 
+                                        Completing that course provided me with great foundational knowledge of Java so, I wanted to push on and learn something a 
+                                        little more complicated.  
+
+                                        There were a few parts needed for this project. I needed a database where I could store the data and, a way to connect 
+                                        my java program to that database. I decided on using MySQL for the database with JDBC as the connector. Once I had the 
+                                        environment set up, I began by building the GUI. Looking back on this after now, some time, I can see many improvements that 
+                                        could be made but here are some screenshots: 
+										<br />
+										<div class="box alt">
+                                            <div class="row gtr-50 gtr-uniform">
+                                                <div class="col-3"><span class="image fit"><img src="images/Select Option.png" alt="" /></span></div>
+                                                <div class="col-3"><span class="image fit"><img src="images/LoginPage.png" alt="" /></span></div>
+                                                <div class="col-3"><span class="image fit"><img src="images/NewUser.png" alt="" /></span></div>
+                                                <div class="col-3"><span class="image fit"><img src="images/CreateAccount2.png" alt="" /></span></div>
+                                                
+                                            </div>
+                                        </div>
+										<p>
+										As seen above, the first option the user has is to either login or, select new user to create a new account. For demonstration 
+                                        purposes, I have cleared the database and entered test data so we can see the program in action. If the user had chosen login, 
+                                        they would have been logged in and taken to the transactions page. Here, when the user creates a new account, they are also logged 
+                                        in and taken to the transactions page.
+                                        </p>
+                                        <br></br>
+										<div class="box alt">
+                                            <div class="row gtr-50 gtr-uniform">
+                                                <div class="col-4"><span class="image fit"><img src="images/OptionsPage.png" alt="" /></span></div>
+                                                <div class="col-4"><span class="image fit"><img src="images/AccountDetails.png" alt="" /></span></div>
+                                                
+                                            </div>
+                                        </div> 
+                                        <p>
+                                        In the screenshot on the left above, the user can perform any action they want to perform from the same window. They also have the option to view their 
+                                        account details, as seen in the screenshot on the right. The account number in the statement is randomly generated for each new customer and, is their 
+                                        primary key within the database. The other thing to highlight is, when the user creates a new account, they also must create a 
+                                        username and password. I have implemented a second table in the database that holds the login details separately, with the password 
+                                        encrypted using the SHA256 hashing algorithm, for security and GDPR. Seen in the screenshot below. 
+                                        </p>
+                                        <a class="image fit"><img src="images/user_login table.png" alt="" /></a>
+                                        <p>As this project was more complicated, I had to find a lot of answers along the way which led to learning a lot more than I had 
+                                            expected. In this case, I thought I would learn “how” to do “what” I wanted but, I learned “why” to do it a certain way especially 
+                                            when handling sensitive user data. This made the whole project much more enjoyable. Finally, I will provide a snippet of code used 
+                                            in the transactions page of the application for depositing to the savings account: 
+                                        </p>
+                                        <a class="image fit"><img src="images/CodeSampleDeposit.png" alt="" /></a>
+                                        <p>The code above deposits the users input amount to their savings account. This piece of code, as with all other transactions, 
+                                            performs checks before it runs. This code is standard enough but the “withdraw” and “transfer” functions check the users balance and 
+                                            notifies the user if there are insufficient funds for the transaction being performed. There are also checks on fields that are 
+                                            required, they must not be empty, and the data type entered must match what input is expected. The connection to the database is 
+                                            opened and closed only when needed. 
+                                            <br></br>
+                                            In summation, there are some changes that could be made to improve the application overall. I could have put all the windows shown 
+                                            above into a single GUI. This would remove switching between windows. There is also some code remaining from when I was testing the 
+                                            functionality that should be removed, and comments should be added to make reading the code more intuitive. 
+                                            <br></br>
+                                            With all that said, this was a very pleasing project to work on. I began thinking I would learn some specific things but ended up 
+                                            learning a lot more which has also changed how I think about creating solutions from the beginning. In this use case, how user data 
+                                            should be handled respectfully and with the end users' best interests at the forefront. </p>
+									</p>
+
+</code></pre>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							
+							<section>
+								
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">williamhogan@hotmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
